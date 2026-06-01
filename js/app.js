@@ -996,3 +996,92 @@
 
 // console.log(subirSueldos(empleados));
 
+
+// 1. El Filtro de Precios Bajos 🛒:Tienes una lista de precios: const precios = [15, 4, 25, 8, 30, 2];.Crea una variable llamada preciosBaratos que use .filter() para quedarse únicamente con los precios que sean menores de 10.
+// Resultado esperado: [4, 8, 2]
+
+// const precios = [15, 4, 25, 8, 30, 2];
+
+// const preciosBaratos = precios.filter(num => num > 10);
+
+
+// 2. El Buscador de Nombres Cortos 🔤:Tienes una lista de nombres: const nombres = ["Alejandro", "Ana", "Luis", "Marta", "Rey"];.Crea una variable llamada nombresCortos que filtre la lista para quedarse solo con los nombres que tengan menos de 5 letras (usa .length).Resultado esperado: ["Ana", "Luis", "Rey"]
+
+// const nombres = ["Alejandro", "Ana", "Luis", "Marta", "Rey"];
+
+// const nombresCortos = nombres.filter(name => name.length < 5);
+
+// console.log(nombresCortos);
+
+
+// 3. Crea una variable llamada mensajesUrgentes que use el método .filter() para quedarse únicamente con los objetos que tengan la propiedad urgente igual a true.
+
+// const mensajes = [
+//     { id: 1, texto: "No puedo entrar", urgente: true },
+//     { id: 2, texto: "Sugerencia de color", urgente: false },
+//     { id: 3, texto: "Error en el pago", urgente: true }
+// ];
+
+// const mensajesUrgentes = mensajes.filter(msg => msg.urgente === true);
+
+// console.log(mensajesUrgentes)
+
+
+// 1. El Convertidor de Euros a Pesetas/Dólares 💵:Tienes una lista de precios en euros: const preciosEuros =;.Crea una variable llamada preciosDolares que use .map() para multiplicar cada precio por 1.10 (suponiendo que un euro vale 1.10 dólares).Resultado esperado: [11, 22, 33, 44]
+
+// const preciosEuros = [10, 20, 30, 40];
+
+// const preciosDolares = preciosEuros.map(money => money * 1.10);
+// console.log(preciosDolares);
+
+
+
+// 2. El Creador de Etiquetas de Precios (Versión Flecha) 🏷️:¿Te acuerdas de cuando nos costó transformar los números en texto con el signo de dólar adelante ("\$10") usando comillas invertidas? ¡Ahora lo vas a hacer en una sola línea!Lista de origen: const importes =;.Crea una variable llamada etiquetas que use .map() y template literals (las comillas invertidas ` y ${}) para transformar cada número en un texto con el $ adelante.
+// Resultado esperado: ["$5", "$12", "$20"]
+
+// const importes = [5, 12, 20];
+
+// const etiquetas = importes.map(num => `$${num}`);
+
+// console.log(etiquetas);
+
+
+
+// Crea una variable llamada nuevosSueldos que use .map() para sumarle 200 dólares al sueldo de cada empleado.
+
+// const empleados = [
+//     { nombre: "Ana", sueldo: 1000 },
+//     { nombre: "Pedro", sueldo: 1200 }
+// ];
+
+// const nuevosSueldos = empleados.map(suma => ({
+//     nombre: suma.nombre,
+//     sueldo: suma.sueldo + 200
+// }));
+
+// console.log(nuevosSueldos);
+
+
+
+
+// Queremos hacer una liquidación. 
+// Crea una variable llamada ofertasDisponibles que en una sola línea haga dos cosas:.filter(): Quédate solo con los productos que SÍ están en stock (prod.enStock === true)..map(): A esos productos que sobrevivieron, bájales el precio a la mitad (precio: prod.precio / 2).
+// Resultado esperado: Una lista con los objetos de los Auriculares (a 15$) y el Ratón Gamer (a 10$). El Teclado desaparece.
+
+
+// const productos = [
+//     { nombre: "Auriculares", precio: 30, enStock: true },
+//     { nombre: "Teclado", precio: 50, enStock: false },
+//     { nombre: "Ratón Gamer", precio: 20, enStock: true }
+// ];
+
+// const ofertasDisponibles = productos
+//     .filter(prod => prod.enStock === true) 
+//     .map(prod => ({                       
+//         nombre: prod.nombre,
+//         precio: prod.precio / 2,
+//         enStock: prod.enStock
+//     }));
+
+
+// console.log(ofertasDisponibles);
