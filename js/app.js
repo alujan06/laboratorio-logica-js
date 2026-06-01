@@ -943,3 +943,56 @@
 // }
 
 // console.log(actualizarPlanEstandar(planes));
+
+
+// Reto 1: El Filtro de Mensajes Urgentes 📨🚨
+// Tienes una lista de mensajes de soporte técnico de una empresa:javascriptconst mensajes = [
+//     { id: 1, texto: "No puedo entrar", urgente: true },
+//     { id: 2, texto: "Sugerencia de color", urgente: false },
+//     { id: 3, texto: "Error en el pago", urgente: true }
+// ];
+// Usa el código con precaución.Crea una función llamada obtenerUrgentes que recorra el arreglo y devuelva un nuevo arreglo únicamente con los objetos de los mensajes que tengan urgente igual a true.
+
+// const mensajes = [
+//     { id: 1, texto: "No puedo entrar", urgente: true },
+//     { id: 2, texto: "Sugerencia de color", urgente: false },
+//     { id: 3, texto: "Error en el pago", urgente: true }
+// ];
+
+// function obtenerUrgentes(array) {
+//     let nuevoArreglo = [];
+//     for(let i = 0; i < array.length; i++) {
+//         if(array[i].urgente === true) {
+//             nuevoArreglo.push(array[i]);
+//         }
+//     }
+//     return nuevoArreglo;
+// }
+
+// console.log(obtenerUrgentes(mensajes));
+
+
+// Reto 2: El Aumento de Sueldo General 💼💵
+// Tienes la lista de empleados de una oficina:javascriptconst empleados = [
+//     { nombre: "Ana", sueldo: 1000 },
+//     { nombre: "Pedro", sueldo: 1200 },
+//     { nombre: "Marta", sueldo: 1500 }
+// ];
+// Usa el código con precaución.El jefe quiere sumarle 200 dólares al sueldo de TODOS los empleados sin excepción (aquí no necesitas usar ningún if). Crea una función llamada subirSueldos que recorra el arreglo, le aumente el sueldo a cada uno modificando su propiedad y devuelva la lista original con los cambios hechos.
+
+
+// const empleados = [
+//     { nombre: "Ana", sueldo: 1000 },
+//     { nombre: "Pedro", sueldo: 1200 },
+//     { nombre: "Marta", sueldo: 1500 }
+// ];
+
+// function subirSueldos (array) {
+//     for(let i = 0; i < array.length; i++) {
+//         array[i].sueldo = array[i].sueldo + 200;
+//     }
+//     return array;
+// }
+
+// console.log(subirSueldos(empleados));
+
