@@ -1158,3 +1158,41 @@
 //         accion: `BLOQUEAR`
 //     }))
 
+
+// 1. Crea una variable llamada libroBuscado que use .find() para obtener el objeto completo del libro que tenga el isbn igual a "B2".Resultado esperado: { isbn: "B2", titulo: "El Principito" }
+
+// const libros = [
+//     { isbn: "A1", titulo: "Don Quijote" },
+//     { isbn: "B2", titulo: "El Principito" },
+//     { isbn: "C3", titulo: "Cien años de soledad" }
+// ];
+
+// const libroBuscado = libros.find(libro => libro.isbn === 'B2');
+
+// console.log(libroBuscado);
+
+
+
+// 2. La Posición del Prófugo 👮‍♂️🚨:
+// Tienes una lista de sospechosos en una fila: const fila = ["vecino", "cartero", "prófugo", "panadero"];.Crea una variable llamada posicionProfugo que usar .findIndex() para descubrir en qué número de posición de la fila exacta se encuentra la palabra "prófugo".
+// Resultado esperado: 2
+
+
+// const fila = ["vecino", "cartero", "prófugo", "panadero"];
+
+// const posicionProfugo = fila.findIndex(pos => pos === 'prófugo');
+
+// console.log(posicionProfugo);
+
+
+// 3. Crea una variable llamada alumnoInactivo que use .find() para capturar al primer alumno que tenga la propiedad activo igual a false.
+
+// const alumnos = [
+//     { nombre: "Laura", activo: true },
+//     { nombre: "Luis", activo: false },
+//     { nombre: "Carlos", activo: true }
+// ];
+
+// const alumnoInactivo = alumnos.find(first => first.activo === false);
+
+// console.log(alumnoInactivo);
