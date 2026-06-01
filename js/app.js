@@ -1085,3 +1085,76 @@
 
 
 // console.log(ofertasDisponibles);
+
+
+// 1. El Filtro de Admisión Universitaria 🎓 (Filtro con números)
+// Tienes una lista con los promedios de notas de varios estudiantes: const notas = [4.2, 7.5, 8.1, 5.0, 9.3, 4.8];.
+// Crea una variable llamada estudiantesAceptados que use .filter() para quedarse únicamente con las notas que sean mayores o iguales a 5.0.Resultado esperado: [7.5, 8.1, 5.0, 9.3]
+
+// const notas = [4.2, 7.5, 8.1, 5.0, 9.3, 4.8];
+
+// const estudiantesAceptados = notas.filter(note => note >= 5.0);
+// console.log(estudiantesAceptados);
+
+
+// 2. El Grito del Canillita 🗣️📰 (Mapa con textos)Tienes un arreglo con los titulares de las noticias de un periódico: const titulares = ["urgente", "deportes", "clima", "politica"];.
+// Crea una variable llamada titularesGritando que use .map() para transformar todas las palabras a MAYÚSCULAS (usando .toUpperCase()).Resultado esperado: ["URGENTE", "DEPORTES", "CLIMA", "POLITICA"]
+
+// const titulares = ["urgente", "deportes", "clima", "politica"];
+
+// const titularesGritando = titulares.map(data => data.toUpperCase());
+
+// console.log(titularesGritando);
+
+
+
+// 3. Crea una variable llamada correosEmpresa que use .map() para devolver un nuevo objeto para cada uno que mantenga su nombre pero le añada la propiedad email combinando su nombre con "@empresa.com".
+
+// const nuevosEmpleados = [
+//     { nombre: "alberto" },
+//     { nombre: "lucia" },
+//     { nombre: "marcos" }
+// ];
+
+// const correosEmpresa = nuevosEmpleados.map(emp => ({
+//     nombre: emp.nombre,
+//     email: `${emp.nombre}@empresa.com`
+// }));
+
+
+
+// Crea una variable llamada chatActivo que use .filter() para quedarse únicamente con los mensajes que NO han sido borrados (es decir, donde borrado === false).
+
+// const chat = [
+//     { id: 1, texto: "Hola, ¿cómo estás?", borrado: false },
+//     { id: 2, texto: "Mensaje eliminado", borrado: true },
+//     { id: 3, texto: "¿Vienes hoy al gimnasio?", borrado: false }
+// ];
+
+
+// const chatArchivo = chat.filter(mensaje => mensaje.borrado === false);
+
+// console.log(chatArchivo);
+
+
+
+
+// Una empresa recibe una lista de correos sospechosos en su servidor. La base de datos te entrega este arreglo de objetos:
+// 👑 Tu Misión de Una Sola Línea:
+// Crea una variable llamada alertasGrave que procese la lista de correosEntrantes conectando dos métodos modernos seguidos:.filter(): Quédate únicamente con los correos que SÍ son peligrosos (peligroso === true)..map(): A esos correos que sobrevivieron al filtro, transfórmalos en un objeto nuevo que solo tenga:El remitente original.Una propiedad nueva llamada accion que guarde el texto "BLOQUEAR" en mayúsculas.
+
+
+// const correosEntrantes = [
+//     { remitente: "banco@seguro.com", texto: "Su cuenta está bloqueada", peligroso: true },
+//     { remitente: "mama@correo.com", texto: "Hola hijo, ¿cómo estás?", peligroso: false },
+//     { remitente: "sorteo@fake.com", texto: "Ganaste un iPhone gratis", peligroso: true },
+//     { remitente: "jefe@empresa.com", texto: "Reunión a las 10:00", peligroso: false }
+// ];
+
+// const alertasGraves = correosEntrantes
+//     .filter(danger => danger.peligroso === true)
+//     .map(action => ({
+//         remitente: action.remitente,
+//         accion: `BLOQUEAR`
+//     }))
+
