@@ -1196,3 +1196,46 @@
 // const alumnoInactivo = alumnos.find(first => first.activo === false);
 
 // console.log(alumnoInactivo);
+
+
+
+// 1. La Cuenta del Supermercado Exprés 🛒💰:
+// Tienes una lista de gastos del día: const gastos = [12, 5, 20, 10];.Crea una variable llamada totalGastos que use .reduce() para sumar todos los números de la lista en una sola línea.
+// Resultado esperado en consola: 47
+
+// const gastos = [12, 5, 20, 10];
+
+// const totalGastos = gastos.reduce((acumulador, num) => acumulador + num, 0);
+
+// console.log(totalGastos);
+
+
+
+// 2. El Carrito de la Compra Pro (Objetos) 🛍️📉:Vamos a repetir el ejercicio del carrito de ayer pero en una sola línea:javascriptconst carrito = [
+//     { articulo: "Camiseta", precio: 25 },
+//     { articulo: "Pantalón", precio: 40 },
+//     { articulo: "Zapatillas", precio: 60 }
+// ];
+// Usa el código con precaución.Crea una variable llamada totalPagar que use .reduce() para sumar los precios de todos los objetos.Resultado esperado: 125
+
+// const carrito = [
+//     { articulo: "Camiseta", precio: 25 },
+//     { articulo: "Pantalón", precio: 40 },
+//     { articulo: "Zapatillas", precio: 60 }
+// ];
+
+// const totalPagar = carrito.reduce((acumulador, num) => acumulador + num.precio , 0);
+
+// console.log(totalPagar);
+
+
+// 3. El Monedero de las Ganancias Limpias (Filtro + Reduce) 🐷💸:¿Te acuerdas de tu primer ejercicio de todos, donde sumabas solo los números positivos e ignorabas los negativos? ¡Ahora vas a encadenar dos métodos modernos en una sola línea!Tienes los movimientos de tu cartera: const movimientos = [20, -5, 50, -12, 10];.
+// Crea una variable llamada misGanancias que use .filter() para quedarse solo con los números mayores que cero, y justo después pégale el .reduce() con un punto para sumarlos.
+// Resultado esperado: 80 (porque 20 + 50 + 10 = 80).
+
+
+// const movimientos = [20, -5, 50, -12, 10];
+
+// const misGanancias = movimientos
+//     .filter(num => num >= 0)
+//     .reduce((acumulador, num) => acumulador + num, 0);
