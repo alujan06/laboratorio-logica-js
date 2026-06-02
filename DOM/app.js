@@ -174,3 +174,68 @@
 // boton.addEventListener('click', () => {
 //     document.body.style.backgroundColor = color.value;
 // });
+
+
+
+
+// 2. Tu misión en app.js (Modo Experto Sin Pistas 🥷):
+// Crea el código para que al pulsar el botón ocurra una de estas tres opciones según el número que el usuario haya escrito en la caja:
+
+// Opción A (Si la temperatura es menor de 30):El texto del título cambia a: "Estado: Temperatura Correcta 🟢" [local].El color de fondo de la página (document.body) se vuelve verde ("green") [local].
+
+// Opción B (Si la temperatura está entre 30 y 70, ambos incluidos):El texto del título cambia a: "Estado: Precaución, subiendo ⚠️" [local].El color de fondo de la página (document.body) se vuelve naranja ("orange") [local].
+
+// Opción C (Si la temperatura es mayor de 70):El texto del título cambia a: "Estado: ¡PELIGRO EXTREMO! 🚨" [local].El color de fondo de la página (document.body) se vuelve rojo ("red") [local].
+
+// const titulo = document.querySelector('#alerta');
+// const texto = document.querySelector('#cajaTemperatura');
+// const boton = document.querySelector('#btnEvaluar');
+
+// boton.addEventListener('click', () => {
+//     if(texto.value < 30) {
+//         titulo.textContent = "Estado: Temperatura Correcta 🟢";
+//         document.body.style.backgroundColor = 'green';
+//     } else if (texto.value >= 30 && texto.value <= 70) {
+//         titulo.textContent = "Estado: Precaución, subiendo ⚠️";
+//         document.body.style.backgroundColor = 'orange';
+//     } else {
+//         titulo.textContent = "Estado: ¡PELIGRO EXTREMO! 🚨";
+//         document.body.style.backgroundColor = 'red';
+//     }
+// });
+
+
+// Tanda de Retos: El Control de las Clases CSS (Sin Pistas 🥷)Para entrenar tu mente con esta nueva técnica, te he preparado 3 ejercicios progresivos.
+
+// Estilo listo en el sistema (imagina que ya existe): "destacado" (vuelve el texto amarillo y con borde).
+// Tu misión: Al pulsar el botón, debes añadirle la clase "destacado" al párrafo usando .classList.add().
+
+// const parrafo = document.querySelector('#parrafo');
+// const boton = document.querySelector('#btnDestacar');
+
+// boton.addEventListener('click', () => {
+//     parrafo.classList.add('destacado');
+// });
+
+
+// Tu misión: 
+// Cada vez que el usuario pulse el botón, debes aplicar un .classList.toggle() con la clase "modo-oscuro" sobre el body de la página (document.body) [local]. 
+// ¡Recuerda que para el body no te hace falta usar querySelector! [local]
+
+
+// const boton = document.querySelector('#btnInterruptor');
+
+// boton.addEventListener('click', () => {
+//     document.body.classList.toggle('modo-oscuro');
+// });
+
+
+// Tu misión: 
+// Al pulsar el botón de cerrar, debes quitarle la clase "visible" a la tarjeta de alerta para simular que desaparece de la pantalla.
+
+const boton = document.querySelector('#btnCerrar');
+const visible = document.querySelector('#alerta');
+
+boton.addEventListener('click', () => {
+    visible.classList.remove('visible');
+})
