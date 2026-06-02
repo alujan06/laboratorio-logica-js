@@ -313,3 +313,32 @@
 //         titulo.classList.remove('oferta');
 //     }
 // });
+
+
+// Enunciado:
+// Queremos una lista interactiva. 
+// Cuando el usuario escriba una tarea en la caja de texto y pulse el botón, debes fabricar un nuevo elemento <li> en el aire, ponerle como texto lo que el usuario escribió en la caja y engancharlo (.append()) dentro de la lista #listaTareas [local].
+
+// const boton = document.querySelector('#btnAnadir');
+// const texto = document.querySelector('#cajaTarea');
+// const lista = document.querySelector('#listaTareas');
+
+
+// boton.addEventListener('click', () => {
+//     const nuevoItem = document.createElement('li');
+//     nuevoItem.textContent = texto.value;
+//     lista.append(nuevoItem);
+// });
+
+
+// Tu misión (Sin pistas 🥷): 
+// Cada vez que se pulse #btnGenerar, debes fabricar una etiqueta <button> en el aire, ponerle como texto "Botón Nuevo" y engancharla (.append()) dentro de #contenedorBotones [local].
+
+// const boton = document.querySelector('#btnGenerar');
+// const contendor = document.querySelector('#contendorBotones');
+
+// boton.addEventListener('click', () => {
+//     const nuevoItem = document.createElement('button');
+//     nuevoItem.textContent = 'Botón Nuevo';
+//     contendor.append(nuevoItem);
+// });
