@@ -118,18 +118,59 @@
 // Si el segundo es más grande: "El segundo es mayor" [local].Si son idénticos: "Son iguales" [local].
 
 
-const boton = document.querySelector('#btnComparar');
-const titulo = document.querySelector('#resultado');
-const input1 = document.querySelector('#numero1');
-const input2 = document.querySelector('#numero2');
+// const boton = document.querySelector('#btnComparar');
+// const titulo = document.querySelector('#resultado');
+// const input1 = document.querySelector('#numero1');
+// const input2 = document.querySelector('#numero2');
+
+// boton.addEventListener('click', () => {
+//     if(input1.value > input2.value) {
+//         titulo.textContent = 'El primero es mayor';
+//     } else if (input1.value === input2.value) {
+//         titulo.textContent = "Son iguales";
+//     } else {
+//         titulo.textContent = "El segundo es mayor";
+//     }
+// })
 
 
-boton.addEventListener('click', () => {
-    if(input1.value > input2.value) {
-        titulo.textContent = 'El primero es mayor';
-    } else if (input1.value === input2.value) {
-        titulo.textContent = "Son iguales";
-    } else {
-        titulo.textContent = "El segundo es mayor";
-    }
-})
+
+// 2. Enunciado:
+// Al pulsar el botón, deben ocurrir dos cambios de diseño simultáneos en la pantalla:
+// El fondo de toda la página web (document.body) debe volverse de color negro [local].
+// Las letras del título (<h1>) deben volverse de color blanco [local].
+
+
+// const titulo = document.querySelector('#texto');
+// const boton = document.querySelector('#btnModo');
+
+// boton.addEventListener('click', () => {
+//     document.body.style.backgroundColor = 'black';
+//     titulo.style.color = 'white';
+// })
+
+
+
+// Tu misión: Al pulsar el botón, el título debe cambiar su texto a "¡Adelante! 🟢", sus letras deben volverse de color verde y su fontSize debe cambiar a "40px".
+
+// const boton = document.querySelector('#btnVerde');
+// const titulo = document.querySelector('#estado');
+
+// boton.addEventListener('click', () => {
+//     titulo.textContent = '¡Adelante! 🟢';
+//     titulo.style.color = 'green';
+//     titulo.style.fontSize = '40px'
+// });
+
+
+
+// Tu misión: 
+// Cuando el usuario escriba un color en inglés en la caja y pulse el botón, el fondo de toda la página (document.body) debe cambiar exactamente al color escrito.
+
+
+// const boton = document.querySelector('#btnPintar');
+// const color = document.querySelector('#cajaColor');
+
+// boton.addEventListener('click', () => {
+//     document.body.style.backgroundColor = color.value;
+// });
