@@ -233,9 +233,83 @@
 // Tu misión: 
 // Al pulsar el botón de cerrar, debes quitarle la clase "visible" a la tarjeta de alerta para simular que desaparece de la pantalla.
 
-const boton = document.querySelector('#btnCerrar');
-const visible = document.querySelector('#alerta');
+// const boton = document.querySelector('#btnCerrar');
+// const visible = document.querySelector('#alerta');
 
-boton.addEventListener('click', () => {
-    visible.classList.remove('visible');
-})
+// boton.addEventListener('click', () => {
+//     visible.classList.remove('visible');
+// })
+
+
+
+
+// Ejercicio 11: El Validador de Formularios Inteligente 📝🔒
+
+// 2. Enunciado:
+// Queremos validar que el nombre de usuario sea seguro antes de dejarlo registrarse. Al pulsar el botón, comprueba la longitud (.length) de lo que ha escrito en la caja:
+
+// Si el texto tiene menos de 5 letras, el título cambia a: "¡Usuario demasiado corto! ❌", el color del texto del título se vuelve rojo ("red") y su tamaño (fontSize) cambia a "25px" [local].
+
+// Si tiene 5 letras o más, el título cambia a: "¡Usuario Registrado con Éxito! 🟢" y el color de su texto se vuelve verde ("green") [local].
+
+// const boton = document.querySelector('#btnValidar');
+// const texto = document.querySelector('#cajaUsuario');
+// const titulo = document.querySelector('#mensajeError');
+
+// boton.addEventListener('click', () => {
+//     if (texto.value.length < 5 ) {
+//         titulo.textContent = "¡Usuario demasiado corto! ❌";
+//         titulo.style.color = 'red';
+//         titulo.style.fontSize = '25px';
+//     } else{
+//         titulo.textContent = "¡Usuario Registrado con Éxito! 🟢";
+//         titulo.style.color = 'green';
+//     }
+// });
+
+
+// Tu misión: 
+// Al pulsar el botón, evalúas la velocidad convirtiéndola a número real [local]. 
+
+// Si es <= 120, el título dice "Velocidad Correcta ✅", el fondo de la web (document.body) se pone azul y el título blanco [local]. 
+
+// Si es > 120, el título dice "¡MULTA! Exceso de velocidad 🚨", el fondo se pone amarillo y las letras negras [local].
+
+// const boton = document.querySelector('#btnRadar');
+// const titulo = document.querySelector('#radar');
+// const texto = document.querySelector('#cajaVelocidad');
+
+
+// boton.addEventListener('click', () => {
+//     if(texto.value <= 120) {
+//         titulo.textContent = "Velocidad Correcta ✅";
+//         titulo.style.color = 'white';
+//         document.body.style.backgroundColor = 'blue';
+//     } else {
+//         titulo.textContent = "¡MULTA! Exceso de velocidad 🚨";
+//         titulo.style.color = 'black';
+//         document.body.style.backgroundColor = 'yellow';
+//     }
+// });
+
+
+
+// Tu misión: 
+// Si el texto es exactamente "DESCUENTO20", el título dice "Total a pagar: 80€ 🎉" y le añades la clase "oferta" con .classList.add() [local]. 
+// Si es otra cosa, vuelve a "Total a pagar: 100€" y le quitas la clase con .classList.remove() [local].
+
+
+// const boton = document.querySelector('#btnAplicar');
+// const texto = document.querySelector('#cajaCupon');
+// const titulo = document.querySelector('#totalCompra');
+
+
+// boton.addEventListener('click', () => {
+//     if(texto.value === 'DESCUENTO20') {
+//         titulo.textContent = "Total a pagar: 80€ 🎉";
+//         titulo.classList.add('oferta');
+//     } else {
+//         titulo.textContent = "Total a pagar: 100€";
+//         titulo.classList.remove('oferta');
+//     }
+// });
