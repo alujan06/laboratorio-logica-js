@@ -340,5 +340,57 @@
 // boton.addEventListener('click', () => {
 //     const nuevoItem = document.createElement('button');
 //     nuevoItem.textContent = 'Botón Nuevo';
-//     contendor.append(nuevoItem);
+//     contendor.append(nuevoItemd);
+// });
+
+
+// Enunciado:
+// Cada vez que el usuario pulse el botón #btnAlerta, debes fabricar un nuevo párrafo <p> en el aire con el texto: "¡Alerta! Haz clic aquí para cerrarla".
+// Antes de colgarlo con .append() dentro de #zonaAlertas, debes programar que si el usuario hace clic sobre esa alerta específica que acaba de nacer, la alerta se borre de la pantalla usando .remove() [local].
+
+
+// const boton = document.querySelector('#btnAlerta');
+// const contenedor = document.querySelector('#zonaAlertas');
+
+// boton.addEventListener('click', () => {
+//     const nuevoItem = document.createElement('p');
+//     nuevoItem.textContent = "¡Alerta! Haz clic aquí para cerrarla";
+
+//     nuevoItem.addEventListener('click', () => {
+//         nuevoItem.remove();
+//     });
+
+//     contenedor.append(nuevoItem);
+// });
+
+
+
+
+// 2. Enunciado (Modo Experto Sin Pistas 🥷):
+// Cuando el usuario escriba en la caja y pulse #btnAnadir, debes hacer tres pasos dentro del evento:
+// Fabricar un elemento <li> en el aire [local].
+// Ponerle como texto lo que el usuario escribió en la caja (cajaTarea.value) [local].
+// Fabricar un botón <button> en el aire que tenga el texto " X" [local].
+// Ponerle un escuchador de clics a ese botoncito nuevo para que, cuando el usuario lo pulse, borre por completo a su elemento padre (<li>) usando .remove() [local].
+// Enganchar (.append()) el botoncito dentro del <li>, y luego enganchar el <li> dentro de la lista #listaTareas [local].
+
+
+// const boton = document.querySelector('#btnAnadir');
+// const texto = document.querySelector('#cajaTarea');
+// const contenedor = document.querySelector('#listaTareas');
+
+// boton.addEventListener('click', () => {
+//     const nuevoItem = document.createElement('li');
+//     nuevoItem.textContent = texto.value;
+
+//     const nuevoItem2 = document.createElement('button');
+//     nuevoItem2.textContent = ' X';
+
+//     nuevoItem2.addEventListener('click', () => {
+//         nuevoItem.remove();
+//     });
+
+//     nuevoItem.append(nuevoItem2);
+//     contenedor.append(nuevoItem);
+
 // });
