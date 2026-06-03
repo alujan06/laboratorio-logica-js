@@ -421,3 +421,35 @@
 // texto.addEventListener('input' , () =>{
 //     parrafo.textContent = texto.value;
 // })
+
+
+
+
+// 2. Tu misión en app.js
+// :Queremos que cuando el usuario pulse cualquiera de los tres botones, el título #mensaje cambie su texto y muestre exactamente el texto del botón que se ha pulsado (usando .textContent) [local].
+// Paso 1: Crea una constante para agarrar el título #mensaje.
+// Paso 2: Crea constantes para agarrar los tres botones (puedes usar sus clases o IDs si quieres ponérselos en el HTML).
+// Paso 3: Ponle el addEventListener('click', (e) => { ... }) a cada botón. ¡No olvides poner la e en el paréntesis!
+// Paso 4: Dentro de cada clic, dile a tu título que su .textContent sea igual al textContent del botón pulsado. (Pista ninja: el texto del botón pulsado se saca con e.target.textContent) [local].
+
+// const titulo = document.querySelector('#mensaje');
+// const alfa = document.querySelector('#btnAlfa');
+// // const beta = document.querySelector('#btnBeta');
+// // const gamma = document.querySelector('#btnGamma');
+
+
+// // alfa.addEventListener('click', (e) => {
+// //     titulo.textContent = e.target.textContent;
+// // });
+
+// // beta.addEventListener('click', (e) => {
+// //     titulo.textContent = e.target.textContent;
+
+// // });
+
+// // gamma.addEventListener('click', (e) => {
+// //     titulo.textContent = e.target.textContent;
+// });
+
+
+

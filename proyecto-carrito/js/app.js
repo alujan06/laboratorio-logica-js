@@ -41,7 +41,18 @@ function actualizarTotal () {
 // Añadir los artiuclos a la lista visualmente
 
 function dibujarCarrito (prod) {
+
     let nuevoItem = document.createElement('li');
     nuevoItem.textContent = prod.nombre;
     lista.append(nuevoItem);
+
+    let boton = document.createElement('button');
+    boton.textContent = ' X';
+    nuevoItem.append(boton);
+
+    boton.addEventListener('click', (e) => {
+        e.target.parentElement.remove();
+        actualizarTotal();
+    });
+    
 };
