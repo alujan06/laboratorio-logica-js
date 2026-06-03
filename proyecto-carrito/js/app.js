@@ -45,10 +45,12 @@ function actualizarTotal () {
 function dibujarCarrito (prod) {
 
     let nuevoItem = document.createElement('li');
+    nuevoItem.classList.add('item-carrito');
     nuevoItem.textContent = prod.nombre;
     lista.append(nuevoItem);
 
     let boton = document.createElement('button');
+    boton.classList.add('btn-delete');
     boton.dataset.id = prod.id;
     boton.textContent = ' X';
     nuevoItem.append(boton);
