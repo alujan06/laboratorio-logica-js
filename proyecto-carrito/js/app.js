@@ -5,7 +5,7 @@ let carrito = [];
 const boton1 = document.querySelector('#btn-camiseta');
 const boton2 = document.querySelector('#btn-pantalon');
 const lista = document.querySelector('#lista-carrito');
-const precioTotal = document.querySelector('#precio-total')
+const precioTotal = document.querySelector('#precio-total');
 
 
 boton1.addEventListener('click', () => {
