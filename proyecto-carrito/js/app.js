@@ -10,6 +10,7 @@ const precioTotal = document.querySelector('#precio-total')
 
 boton1.addEventListener('click', () => {
     const nuevoObjeto = {
+        id: Date.now(),
         nombre: 'Camiseta Negra',
         precio: 25
     };
@@ -22,6 +23,7 @@ boton1.addEventListener('click', () => {
 
 boton2.addEventListener('click', () => {
     const nuevoObjeto2 = {
+        id: Date.now(),
         nombre: 'Pantalon Vaquero',
         precio: 40
     }
@@ -38,7 +40,7 @@ function actualizarTotal () {
 };
 
 
-// Añadir los artiuclos a la lista visualmente
+// Añadir los artiuclos a la lista visualmente y quitarlos
 
 function dibujarCarrito (prod) {
 
@@ -47,11 +49,13 @@ function dibujarCarrito (prod) {
     lista.append(nuevoItem);
 
     let boton = document.createElement('button');
+    boton.dataset.id = prod.id;
     boton.textContent = ' X';
     nuevoItem.append(boton);
 
     boton.addEventListener('click', (e) => {
         e.target.parentElement.remove();
+        carrito = carrito.filter(item => item.id !== Number(e.target.dataset.id));
         actualizarTotal();
     });
     
