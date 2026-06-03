@@ -394,3 +394,30 @@
 //     contenedor.append(nuevoItem);
 
 // });
+
+
+
+
+// Enunciado:
+// Queremos controlar el envío del formulario. Al hacer submit en el #formularioRegistro, debes frenar la recarga de la página con e.preventDefault() [local]. Luego, cambia el texto del título #mensaje para que diga: "¡Registro completado para el correo: [aquí pones el valor de la caja]!" [local].
+
+// const formulario = document.querySelector('#formularioRegistro');
+// const mensaje = document.querySelector('#mensaje');
+// const valorCaja = document.querySelector('#cajaEmail'); 
+
+// formulario.addEventListener('submit', (e) => {
+//     e.preventDefault();
+//     mensaje.textContent = `¡Registro completado para el correo: ${valorCaja.value}!`;
+// });
+
+
+// Tu misión (Sin pistas 🥷): 
+// Ponle el evento "input" a la caja #buscador [local]. 
+// Dentro del evento, haz que el párrafo #copiaTexto cambie su .textContent para mostrar en tiempo real lo que el usuario va escribiendo en la caja [local].
+
+// const parrafo = document.querySelector('#copiaTexto');
+// const texto = document.querySelector('#buscador');
+
+// texto.addEventListener('input' , () =>{
+//     parrafo.textContent = texto.value;
+// })
