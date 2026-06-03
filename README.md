@@ -1,17 +1,19 @@
-# 🧪 Laboratorio de Lógica en JavaScript - Diario de Prácticas
+# 🛒 Proyecto: Tienda Virtual Interactiva con Arquitectura de Estado
 
-¡Hola! Este repositorio es mi diario personal de entrenamiento en JavaScript, donde guardo todas las prácticas y retos de código que voy superando en mi día a día.
+En este proyecto he dado el salto definitivo al desarrollo frontend profesional, conectando una base de datos lógica en memoria con una interfaz gráfica interactiva en tiempo real (DOM).
 
-## 🧠 ¿Cómo funciona este laboratorio?
-Para entrenar mi mente como desarrollador de software, utilizo un tutor de Inteligencia Artificial con una metodología estricta:
-1. La IA me plantea **enunciados y retos basados en problemas reales** del mundo laboral (limpieza de datos, filtros de seguridad, manejo de carritos de compra, gestión de objetos, etc.).
-2. **No me da las soluciones.** Yo soy el encargado de picar cada línea de código desde cero en mi editor.
-3. Si cometo un error de lógica o sintaxis, la IA me da pequeñas pistas conceptuales y yo me encargo de **analizar, refaccionar y corregir mi propio código** hasta que funciona al 100%.
+## 🛠️ Tecnologías y Conceptos Avanzados Aplicados
 
-## 🛠️ Conceptos dominados y en desarrollo:
-* **Estructuras de control:** Bucles `for` dinámicos y lógica condicional anidada (`if / else if / else`).
-* **Manipulación de Arrays:** Filtros, contadores, acumuladores matemáticos y de texto, y métodos avanzados como `.push()`, `.includes()` y `.splice()` con control de índices (`i--`).
-* **Manejo de Objetos:** Filtrado dinámico de datos, lectura de propiedades complejas y mutación/actualización de objetos en tiempo real dentro de listas mixtas.
+### 1. Gestión de Estado Lógico (`Data Layer`)
+* **Base de Datos en Memoria:** Creación de un arreglo global (`carrito`) que actúa como la "fuente única de verdad" de la aplicación, mutando dinámicamente mediante el método `.push()`.
+* **Programación Funcional y Acumuladores:** Implementación del método moderno avanzado `.reduce()` para procesar la colección de objetos y calcular el coste financiero total en una sola línea de código limpia y eficiente.
 
----
-¡El código de este repositorio es 100% fruto de mi esfuerzo, mis errores y mi aprendizaje diario! 🚀💻
+### 2. Manipulación Avanzada del DOM (`UI Layer`)
+* **Inyección de Componentes Dinámicos:** Uso de `document.createElement()` y `.append()` para fabricar etiquetas semánticas (`<li>`) directamente desde JavaScript e integrarlas en el flujo del navegador.
+* **Arquitectura de Parámetros Dinámicos (Mensajeros):** Configuración de funciones de renderizado aisladas que aceptan objetos como argumentos (`prod.nombre`), permitiendo pintar datos específicos en pantalla de forma modular.
+* **Escuchadores de Eventos en Paralelo:** Sincronización de múltiples eventos de tipo `'click'` que ejecutan la lógica de negocio y la actualización visual de manera coordinada.
+
+### 3. Buenas Prácticas de Ingeniería de Software
+* **Separación de Responsabilidades:** División estricta del código en funciones matemáticas/lógicas (`actualizarTotal`) y funciones de renderizado visual (`dibujarCarrito`).
+* **Control de Versiones Atómico:** Registro constante del progreso mediante una estrategia de commits secuenciales y limpios en mi perfil de GitHub.
+
