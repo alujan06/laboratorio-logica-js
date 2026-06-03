@@ -49,7 +49,7 @@ Este repositorio no para. Mis siguientes metas y proyectos para alcanzar el nive
 * [ ] **Botones de eliminación quirúrgica en el carrito:** Implementar el control de `event.target` (parámetro `e`) para saber con precisión milimétrica qué botón de "X" ha pulsado el usuario y borrar solo ese artículo.
 * [ ] **Persistencia de Datos (`LocalStorage`):** Conectar una mini base de datos en el navegador para que la lista de la compra se quede guardada aunque el usuario cierre la pestaña o refresque la página.
 * [ ] **Clón de Aplicación de Notas/Agenda Pro:** Crear un gestor de notas interactivo que permita crear tarjetas personalizadas, cambiarles el color de fondo individualmente y organizarlas de forma dinámica.
-* [ ] **Conexión con Servidores Reales (APIs y Fetch):** El paso definitivo para que mis aplicaciones consuman datos verdaderos de internet (clima real, productos de bases de datos externas, etc.).
+* [ ] **Conexión con Servidores Reales (APIs y Fetch):** El paso definitivo para que mis aplicaciones consuman datos verdaderos de internet (clima real, productos de bases de datos externas, etc.)..
 
 ---
 *Desarrollado con disciplina, café y commits atómicos diarios en mi cuenta de GitHub.*
