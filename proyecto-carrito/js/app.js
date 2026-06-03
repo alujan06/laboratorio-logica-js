@@ -1,4 +1,4 @@
-let carrito = [];
+let carrito = JSON.parse(localStorage.getItem('carritoGuardado')) || [];
 
 // Añadir el primer producto logica
 
@@ -7,6 +7,12 @@ const boton2 = document.querySelector('#btn-pantalon');
 const lista = document.querySelector('#lista-carrito');
 const precioTotal = document.querySelector('#precio-total');
 
+
+
+for (let i = 0; i < carrito.length; i++) {
+    dibujarCarrito(carrito[i]);
+}
+actualizarTotal();
 
 boton1.addEventListener('click', () => {
     const nuevoObjeto = {
@@ -37,6 +43,7 @@ boton2.addEventListener('click', () => {
 function actualizarTotal () {
     let total = carrito.reduce((acum, prod) => acum + prod.precio, 0);
     precioTotal.textContent = total;
+    localStorage.setItem('carritoGuardado', JSON.stringify(carrito));
 };
 
 
