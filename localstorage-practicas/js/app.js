@@ -58,15 +58,41 @@
 
 //Cuarta Practica
 
-const boton = document.querySelector('#btnSumar');
-const marcador = document.querySelector('#marcador');
+// const boton = document.querySelector('#btnSumar');
+// const marcador = document.querySelector('#marcador');
 
-let cuenta = Number(localStorage.getItem('totalClics')) || 0;
+// let cuenta = Number(localStorage.getItem('totalClics')) || 0;
 
-marcador.textContent = cuenta;
+// marcador.textContent = cuenta;
+
+// boton.addEventListener('click', () => {
+//     cuenta++;
+//     marcador.textContent = cuenta;
+//     localStorage.setItem('totalClics', cuenta);
+// });
+
+
+// Quinta Practica
+
+let arrayGlobal = JSON.parse(localStorage.getItem('misPelis')) || [];
+
+const texto = document.querySelector('#cajaPeli');
+const boton = document.querySelector('#btnAnadirPeli');
+const lista = document.querySelector('#listaPelis'); 
+
+for(let i = 0; i < arrayGlobal.length; i++) {
+    const nuevoItem = document.createElement('li');
+    nuevoItem.textContent = arrayGlobal[i];
+    lista.append(nuevoItem);
+} 
 
 boton.addEventListener('click', () => {
-    cuenta++;
-    marcador.textContent = cuenta;
-    localStorage.setItem('totalClics', cuenta);
+    arrayGlobal.push(texto.value);
+
+    const nuevoItem2 = document.createElement('li');
+    nuevoItem2.textContent = texto.value;
+    lista.append(nuevoItem2);
+
+
+    localStorage.setItem('misPelis', JSON.stringify(arrayGlobal));
 });
