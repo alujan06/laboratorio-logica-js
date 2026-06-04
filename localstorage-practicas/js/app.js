@@ -74,25 +74,51 @@
 
 // Quinta Practica
 
-let arrayGlobal = JSON.parse(localStorage.getItem('misPelis')) || [];
+// let arrayGlobal = JSON.parse(localStorage.getItem('misPelis')) || [];
 
-const texto = document.querySelector('#cajaPeli');
-const boton = document.querySelector('#btnAnadirPeli');
-const lista = document.querySelector('#listaPelis'); 
+// const texto = document.querySelector('#cajaPeli');
+// const boton = document.querySelector('#btnAnadirPeli');
+// const lista = document.querySelector('#listaPelis'); 
 
-for(let i = 0; i < arrayGlobal.length; i++) {
+// for(let i = 0; i < arrayGlobal.length; i++) {
+//     const nuevoItem = document.createElement('li');
+//     nuevoItem.textContent = arrayGlobal[i];
+//     lista.append(nuevoItem);
+// } 
+
+// boton.addEventListener('click', () => {
+//     arrayGlobal.push(texto.value);
+
+//     const nuevoItem2 = document.createElement('li');
+//     nuevoItem2.textContent = texto.value;
+//     lista.append(nuevoItem2);
+
+
+//     localStorage.setItem('misPelis', JSON.stringify(arrayGlobal));
+// });
+
+// Sexta Practica
+
+let notas = JSON.parse(localStorage.getItem('misNotasGuardadas')) || [];
+
+const lista = document.querySelector('#listaNotas');
+const boton = document.querySelector('#btnAnadir');
+const caja = document.querySelector('#cajaNota');
+
+for(let i = 0; i < notas.length; i++) {
     const nuevoItem = document.createElement('li');
-    nuevoItem.textContent = arrayGlobal[i];
+    nuevoItem.textContent = notas[i];
     lista.append(nuevoItem);
-} 
+};
 
 boton.addEventListener('click', () => {
-    arrayGlobal.push(texto.value);
+    notas.push(caja.value);
 
     const nuevoItem2 = document.createElement('li');
-    nuevoItem2.textContent = texto.value;
-    lista.append(nuevoItem2);
+    nuevoItem2.textContent = caja.value;
+    lista.append(nuevoItem2)
 
 
-    localStorage.setItem('misPelis', JSON.stringify(arrayGlobal));
+
+    localStorage.setItem('misNotasGuardadas', JSON.stringify(notas));
 });
