@@ -40,3 +40,33 @@
 //     console.log(listaReal)
 // });
 
+
+//Tercera Practica
+// const texto = document.querySelector('#cajaEquipo');
+// const botonG = document.querySelector('#btnGuardarEquipo');
+// const botonVer = document.querySelector('#btnMostrarEquipo');
+// const titulo = document.querySelector('#marcador');
+
+// botonG.addEventListener('click', () => {
+//     localStorage.setItem('equipoFavorito', texto.value);
+// });
+
+// botonVer.addEventListener('click', () => {
+//    const textoGuardado = localStorage.getItem('equipoFavorito');
+//    titulo.textContent = textoGuardado;
+// });
+
+//Cuarta Practica
+
+const boton = document.querySelector('#btnSumar');
+const marcador = document.querySelector('#marcador');
+
+let cuenta = Number(localStorage.getItem('totalClics')) || 0;
+
+marcador.textContent = cuenta;
+
+boton.addEventListener('click', () => {
+    cuenta++;
+    marcador.textContent = cuenta;
+    localStorage.setItem('totalClics', cuenta);
+});
