@@ -168,9 +168,16 @@
 // }
 
 // boton.addEventListener('click', () => {
+//     if(cancion.value === ''){
+//         alert('¡Por favor, escribe una canción!');
+//         return;
+//     }
 //     playlist.push(cancion.value);
+
 //     const nuevoItem2 = document.createElement('li');
 //     nuevoItem2.textContent = cancion.value;
-//      lista.append(nuevoItem2);
+//     lista.append(nuevoItem2);
+
+
 //     localStorage.setItem('misCanciones', JSON.stringify(playlist));
 // });
