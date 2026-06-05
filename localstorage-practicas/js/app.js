@@ -99,26 +99,28 @@
 
 // Sexta Practica
 
-let notas = JSON.parse(localStorage.getItem('misNotasGuardadas')) || [];
+// let notas = JSON.parse(localStorage.getItem('misNotasGuardadas')) || [];
 
-const lista = document.querySelector('#listaNotas');
-const boton = document.querySelector('#btnAnadir');
-const caja = document.querySelector('#cajaNota');
+// const lista = document.querySelector('#listaNotas');
+// const boton = document.querySelector('#btnAnadir');
+// const caja = document.querySelector('#cajaNota');
 
-for(let i = 0; i < notas.length; i++) {
-    const nuevoItem = document.createElement('li');
-    nuevoItem.textContent = notas[i];
-    lista.append(nuevoItem);
-};
+// for(let i = 0; i < notas.length; i++) {
+//     const nuevoItem = document.createElement('li');
+//     nuevoItem.textContent = notas[i];
+//     lista.append(nuevoItem);
+// };
 
-boton.addEventListener('click', () => {
-    notas.push(caja.value);
+// boton.addEventListener('click', () => {
+//     notas.push(caja.value);
 
-    const nuevoItem2 = document.createElement('li');
-    nuevoItem2.textContent = caja.value;
-    lista.append(nuevoItem2)
+//     const nuevoItem2 = document.createElement('li');
+//     nuevoItem2.textContent = caja.value;
+//     lista.append(nuevoItem2)
 
 
 
-    localStorage.setItem('misNotasGuardadas', JSON.stringify(notas));
-});
+//     localStorage.setItem('misNotasGuardadas', JSON.stringify(notas));
+// });
+
+// Septima practica 
