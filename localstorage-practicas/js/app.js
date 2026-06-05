@@ -124,3 +124,30 @@
 // });
 
 // Septima practica 
+
+// const colorRecuperado = localStorage.getItem('colorGuardado');
+
+// if(colorRecuperado) {
+//     document.body.style.backgroundColor = colorRecuperado;
+// }
+
+
+// const boton_feliz = document.querySelector('#btn-feliz');
+// const boton_cansado = document.querySelector('#btn-cansado'); 
+// const boton_atope = document.querySelector('#btn-atope');
+
+
+// boton_feliz.addEventListener('click', () => {
+//     document.body.style.backgroundColor = '#4ade80';
+//     localStorage.setItem('colorGuardado', '#4ade80');
+// });
+
+// boton_cansado.addEventListener('click', () => {
+//     document.body.style.backgroundColor = '#fde047';
+//     localStorage.setItem('colorGuardado', '#fde047');
+// });
+
+// boton_atope.addEventListener('click', () => {
+//     document.body.style.backgroundColor = '#f43f5e';
+//     localStorage.setItem('colorGuardado', '#f43f5e');
+// });
