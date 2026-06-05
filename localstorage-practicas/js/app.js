@@ -151,3 +151,26 @@
 //     document.body.style.backgroundColor = '#f43f5e';
 //     localStorage.setItem('colorGuardado', '#f43f5e');
 // });
+
+// Octava Practica
+
+// const playlist = JSON.parse(localStorage.getItem('misCanciones')) || [];
+
+// const cancion = document.querySelector('#cajaCancion');
+// const boton = document.querySelector('#btnAnadir');
+// const lista = document.querySelector('#listaMusica');
+
+
+// for(let i = 0; i < playlist.length; i++){
+//     const nuevoItem = document.createElement('li');
+//     nuevoItem.textContent = playlist[i];
+//     lista.append(nuevoItem);
+// }
+
+// boton.addEventListener('click', () => {
+//     playlist.push(cancion.value);
+//     const nuevoItem2 = document.createElement('li');
+//     nuevoItem2.textContent = cancion.value;
+//      lista.append(nuevoItem2);
+//     localStorage.setItem('misCanciones', JSON.stringify(playlist));
+// });
