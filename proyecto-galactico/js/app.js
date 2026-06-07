@@ -6,6 +6,8 @@
 
 // #inputGalactico, #btnEscanear, #contenedor-busqueda, #lista-favoritos
 
+let favoritos = []; 
+
 const boton = document.querySelector('#btnEscanear');
 const idPer = document.querySelector('#inputGalactico');
 const contenedor = document.querySelector('#contenedor-busqueda');
@@ -35,6 +37,15 @@ async function escanearPersonaje() {
             <button id="btnAgregarFav" class="btn-fav">⭐ Guardar Favorito</button>
         </div>
     `;
+
+    const botonFav = document.querySelector('#btnAgregarFav');
+    botonFav.addEventListener('click', () =>{
+        favoritos.push(personaje.name)
+        const nuevoItem = document.createElement('li');
+        nuevoItem.classList.add('item-fav');
+        nuevoItem.textContent = personaje.name;
+        lista.append(nuevoItem);
+    });
 }
 
 
