@@ -13,14 +13,22 @@ const idPer = document.querySelector('#inputGalactico');
 const contenedor = document.querySelector('#contenedor-busqueda');
 const lista = document.querySelector('#lista-favoritos'); 
 
-
 for (let i = 0; i < favoritos.length; i++) {
     const nuevoItem = document.createElement('li');
     nuevoItem.classList.add('item-fav');
-    nuevoItem.textContent = favoritos[i];
+    nuevoItem.innerHTML = `
+        <span>${favoritos[i]}</span>
+        <button class="btn-borrar-fav">X</button>
+    `;
     lista.append(nuevoItem);
-}
 
+    const btnBorrarAnterior = nuevoItem.querySelector('.btn-borrar-fav');
+    btnBorrarAnterior.addEventListener('click', () => {
+        nuevoItem.remove(); // Borra de la pantalla
+        favoritos = favoritos.filter(item => item !== favoritos[i]); // Borra de la memoria
+        localStorage.setItem('misFavoritosGalacticos', JSON.stringify(favoritos)); // Actualiza
+    });
+}
 
 async function escanearPersonaje() {
     let id = idPer.value.trim();
@@ -30,7 +38,7 @@ async function escanearPersonaje() {
         return;
     }
 
-    const respuesta = await fetch (`https://swapi.py4e.com/api/people/${id}/`);
+    const respuesta = await fetch(`https://swapi.py4e.com/api/people/${id}/`);
     const personaje = await respuesta.json();
     console.log(personaje);
 
@@ -45,22 +53,21 @@ async function escanearPersonaje() {
     `;
 
     const botonFav = document.querySelector('#btnAgregarFav');
-    botonFav.addEventListener('click', () =>{
+    botonFav.addEventListener('click', () => {
         favoritos.push(personaje.name);
         const nuevoItem = document.createElement('li');
         nuevoItem.classList.add('item-fav');
         nuevoItem.innerHTML = `
-        <span>${personaje.name}</span>
-        <button class="btn-borrar-fav">X</button>
+            <span>${personaje.name}</span>
+            <button class="btn-borrar-fav">X</button>
         `;
         lista.append(nuevoItem);
         localStorage.setItem('misFavoritosGalacticos', JSON.stringify(favoritos));
 
-
-        const btnBorrar = nuevoItem.querySelector('.btn-borrar-fav');
-        btnBorrar.addEventListener('click', () => {
-            nuevoItem.remove();
-            favoritos = favoritos.filter(item => item !== personaje.name);
+        const btnBorrarNuevo = nuevoItem.querySelector('.btn-borrar-fav');
+        btnBorrarNuevo.addEventListener('click', () => {
+            nuevoItem.remove(); 
+            favoritos = favoritos.filter(item => item !== personaje.name); 
             localStorage.setItem('misFavoritosGalacticos', JSON.stringify(favoritos));
         });
     });
