@@ -23,7 +23,7 @@ for (let i = 0; i < favoritos.length; i++) {
 
 
 async function escanearPersonaje() {
-    let id = idPer.value;
+    let id = idPer.value.trim();
 
     if(id === ''){
         alert('Por favor, escriba un ID válido');
@@ -49,9 +49,20 @@ async function escanearPersonaje() {
         favoritos.push(personaje.name);
         const nuevoItem = document.createElement('li');
         nuevoItem.classList.add('item-fav');
-        nuevoItem.textContent = personaje.name;
+        nuevoItem.innerHTML = `
+        <span>${personaje.name}</span>
+        <button class="btn-borrar-fav">X</button>
+        `;
         lista.append(nuevoItem);
         localStorage.setItem('misFavoritosGalacticos', JSON.stringify(favoritos));
+
+
+        const btnBorrar = nuevoItem.querySelector('.btn-borrar-fav');
+        btnBorrar.addEventListener('click', () => {
+            nuevoItem.remove();
+            favoritos = favoritos.filter(item => item !== personaje.name);
+            localStorage.setItem('misFavoritosGalacticos', JSON.stringify(favoritos));
+        });
     });
 }
 
