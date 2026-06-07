@@ -6,12 +6,21 @@
 
 // #inputGalactico, #btnEscanear, #contenedor-busqueda, #lista-favoritos
 
-let favoritos = []; 
+let favoritos = JSON.parse(localStorage.getItem('misFavoritosGalacticos')) || [];
 
 const boton = document.querySelector('#btnEscanear');
 const idPer = document.querySelector('#inputGalactico');
 const contenedor = document.querySelector('#contenedor-busqueda');
-const lista = document.querySelector('#lista-favoritos');
+const lista = document.querySelector('#lista-favoritos'); 
+
+
+for (let i = 0; i < favoritos.length; i++) {
+    const nuevoItem = document.createElement('li');
+    nuevoItem.classList.add('item-fav');
+    nuevoItem.textContent = favoritos[i];
+    lista.append(nuevoItem);
+}
+
 
 async function escanearPersonaje() {
     let id = idPer.value;
@@ -20,13 +29,10 @@ async function escanearPersonaje() {
         alert('Por favor, escriba un ID válido');
         return;
     }
-    
-
 
     const respuesta = await fetch (`https://swapi.py4e.com/api/people/${id}/`);
     const personaje = await respuesta.json();
     console.log(personaje);
-
 
     contenedor.innerHTML = `
         <div class="tarjeta-personaje">
@@ -40,14 +46,14 @@ async function escanearPersonaje() {
 
     const botonFav = document.querySelector('#btnAgregarFav');
     botonFav.addEventListener('click', () =>{
-        favoritos.push(personaje.name)
+        favoritos.push(personaje.name);
         const nuevoItem = document.createElement('li');
         nuevoItem.classList.add('item-fav');
         nuevoItem.textContent = personaje.name;
         lista.append(nuevoItem);
+        localStorage.setItem('misFavoritosGalacticos', JSON.stringify(favoritos));
     });
 }
-
 
 boton.addEventListener('click', () => {
     escanearPersonaje();
